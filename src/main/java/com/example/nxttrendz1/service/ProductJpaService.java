@@ -53,28 +53,28 @@ public class ProductJpaService implements ProductRepository {
     }
 
     @Override
-    public Product updateProduct(int productId, Product product){
+    public Product updateProduct(int productId, Product product) {
         Product oldProduct = productJpaRepository.findById(productId).get();
-        try{
-            if(product.getProductName() != null){
+        try {
+            if (product.getProductName() != null) {
                 oldProduct.setProductName(product.getProductName());
             }
-            if(product.getPrice() != 0D){
+            if (product.getPrice() != 0D) {
                 oldProduct.setPrice(product.getPrice());
             }
 
             productJpaRepository.save(oldProduct);
             return oldProduct;
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
 
     @Override
-    public void deleteProduct(int productId){
-        try{
+    public void deleteProduct(int productId) {
+        try {
             productJpaRepository.deleteById(productId);
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
