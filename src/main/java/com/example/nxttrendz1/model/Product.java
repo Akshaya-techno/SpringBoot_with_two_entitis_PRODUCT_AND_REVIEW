@@ -7,53 +7,54 @@
  */
 
 // Write your code here
-package com.example.nxttrendz1.model'
+package com.example.nxttrendz1.model;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "product")
-public class Product{
+public class Product {
     @Id
     @Column(name = "productId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
 
-    @Column(name = "productId")
+    @Column(name = "productName")
     private String productName;
 
     @Column(name = "price")
     private double price;
 
-    public Product(){}
+    public Product() {
+    }
 
-    public Product(int productId, String productName, double price){
+    public Product(int productId, String productName, double price) {
         this.productId = productId;
         this.productName = productName;
         this.price = price;
     }
 
-    public void setProductId(int productId){
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
-    public int getProductId(){
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductName(String productName){
+    public void setProductName(String productName) {
         this.productName = productName;
     }
 
-    public String getProductName(){
+    public String getProductName() {
         return productName;
     }
 
-    public void setPrice(double price){
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return price;
     }
 }

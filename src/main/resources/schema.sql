@@ -9,5 +9,5 @@ CREATE TABLE review(
     reviewContent VARCHAR(255),
     rating INT,
     productId INT,
-    FOREIGN KEY(productId) REFERENCES Product(productId)
+    FOREIGN KEY(productId) REFERENCES product(productId)
 );
