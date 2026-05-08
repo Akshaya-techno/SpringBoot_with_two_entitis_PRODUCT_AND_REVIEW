@@ -15,16 +15,16 @@ import javax.persistence.*;
 @Table(name = "review")
 public class Review {
     @Id
-    @Column(name = "review_id")
+    @Column(name = "reviewid")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int reviewId;
-    @Column(name = "review_content")
+    @Column(name = "reviewcontent")
     private String reviewContent;
     @Column(name = "rating")
     private int rating;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "productid")
     private Product product;
 
     public Review() {
