@@ -20,34 +20,7 @@ import com.example.nxttrendz1.service.ProductJpaService;
 import com.example.nxttrendz1.model.Product;
 
 @RestController
-<<<<<<< HEAD
-public class ProductController{
-    @Autowired 
-    private ProductJpaService productJpaService;
 
-    @GetMapping("/products")    
-    public List<Product> getAllProducts() {
-        return productJpaService.getAllProducts();    
-    }    
-    @PostMapping("/products")    
-    public Product addProduct(@RequestBody Product product) {
-            return productJpaService.addProduct(product);    
-    }    
-    @GetMapping("/products/{productId}")    
-    public Product getProductById(@PathVariable int productId) {
-        return productJpaService.getProductById(productId);    
-    }
-    @PutMapping("/products/{productId}")    
-    public Product updateProduct(@PathVariable int productId, @RequestBody Product product) {
-        return productJpaService.updateProduct(productId, product);    
-    }    
-    @DeleteMapping("/products/{productId}")    
-    public void deleteProduct(@PathVariable int productId) {
-        productJpaService.deleteProduct(productId);    
-    }
-}
-    
-=======
 public class ProductController {
     @Autowired
     private ProductJpaService productJpaService;
@@ -77,4 +50,4 @@ public class ProductController {
         productJpaService.deleteProduct(productId);
     }
 }
->>>>>>> commit before final
+

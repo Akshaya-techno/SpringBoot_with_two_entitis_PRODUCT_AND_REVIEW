@@ -72,11 +72,8 @@ public class ReviewJpaService implements ReviewRepository {
             if (review.getRating() != 0) {
                 oldReview.setRating(review.getRating());
             }
-<<<<<<< HEAD
-            if(review.getProduct() != null){
-=======
+
             if (review.getProduct() != null) {
->>>>>>> commit before final
                 Product product = review.getProduct();
                 int productId = product.getProductId();
                 Product newProduct = productJpaRepository.findById(productId).get();
