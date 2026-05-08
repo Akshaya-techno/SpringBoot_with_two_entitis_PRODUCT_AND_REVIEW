@@ -1,3 +1,4 @@
+
 CREATE TABLE product(
     productId INT PRIMARY KEY AUTO_INCREMENT,
     productName VARCHAR(255),

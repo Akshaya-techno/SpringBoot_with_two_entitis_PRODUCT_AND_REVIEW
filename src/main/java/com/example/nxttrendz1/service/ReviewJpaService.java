@@ -50,7 +50,6 @@ public class ReviewJpaService implements ReviewRepository {
         }
         return reviewJpaRepository.save(review);
         
-        
     }
 
     @Override
@@ -65,7 +64,6 @@ public class ReviewJpaService implements ReviewRepository {
 
     @Override
     public Review updateReview(int reviewId, Review review) {
-        
         try {
             Review oldReview = reviewJpaRepository.findById(reviewId).get();
             if (review.getReviewContent() != null) {
@@ -74,7 +72,11 @@ public class ReviewJpaService implements ReviewRepository {
             if (review.getRating() != 0) {
                 oldReview.setRating(review.getRating());
             }
+<<<<<<< HEAD
             if(review.getProduct() != null){
+=======
+            if (review.getProduct() != null) {
+>>>>>>> commit before final
                 Product product = review.getProduct();
                 int productId = product.getProductId();
                 Product newProduct = productJpaRepository.findById(productId).get();

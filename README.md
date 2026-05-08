@@ -42,7 +42,11 @@ _Create the SQL files and compose accurate queries to run the application. Inacc
 |    Columns    |                 Type                  |
 | :-----------: | :-----------------------------------: |
 |   reviewId    | INTEGER (Primary Key, Auto Increment) |
+<<<<<<< HEAD
 | reviewId |                 TEXT                  |
+=======
+| reviewContent |                 TEXT                  |
+>>>>>>> commit before final
 |    rating     |                INTEGER                |
 |   productId   |         INTEGER (Foreign Key)         |
 

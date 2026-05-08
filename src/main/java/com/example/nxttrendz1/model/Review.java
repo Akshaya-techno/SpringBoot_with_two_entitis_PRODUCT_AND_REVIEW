@@ -15,16 +15,27 @@ import javax.persistence.*;
 @Table(name = "review")
 public class Review {
     @Id
+<<<<<<< HEAD
     @Column(name = "reviewId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int reviewId;
     @Column(name = "reviewContent")
+=======
+    @Column(name = "review_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int reviewId;
+    @Column(name = "review_content")
+>>>>>>> commit before final
     private String reviewContent;
     @Column(name = "rating")
     private int rating;
 
     @ManyToOne
+<<<<<<< HEAD
     @JoinColumn(name = "productId")
+=======
+    @JoinColumn(name = "product_id")
+>>>>>>> commit before final
     private Product product;
 
     public Review() {
@@ -68,4 +79,8 @@ public class Review {
     public Product getProduct() {
         return product;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> commit before final

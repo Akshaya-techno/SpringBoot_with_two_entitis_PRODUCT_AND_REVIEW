@@ -1,8 +1,10 @@
+
 INSERT INTO product(productName, price) 
 VALUES
 ('Smartphone', 599.99),
 ('Laptop', 1299.99),
 ('Gaming Console', 399.99);
+
 
 
 INSERT INTO review(reviewContent, rating, productId) 

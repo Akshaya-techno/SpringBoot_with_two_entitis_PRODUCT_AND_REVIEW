@@ -15,11 +15,19 @@ import javax.persistence.*;
 @Table(name = "product")
 public class Product {
     @Id
+<<<<<<< HEAD
     @Column(name = "productId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
 
     @Column(name = "productName")
+=======
+    @Column(name = "product_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int productId;
+
+    @Column(name = "product_name")
+>>>>>>> commit before final
     private String productName;
 
     @Column(name = "price")
