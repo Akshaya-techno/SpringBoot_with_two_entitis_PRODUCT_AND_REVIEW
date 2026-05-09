@@ -13,6 +13,7 @@ package com.example.nxttrendz1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 
@@ -46,8 +47,8 @@ public class ProductController {
     }
 
     @DeleteMapping("/products/{productId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteProduct(@PathVariable int productId) {
         productJpaService.deleteProduct(productId);
     }
 }
-

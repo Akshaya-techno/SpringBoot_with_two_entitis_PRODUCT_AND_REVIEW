@@ -42,14 +42,13 @@ public class ReviewJpaService implements ReviewRepository {
     public Review addNewReview(Review review) {
         Product product = review.getProduct();
         int productId = product.getProductId();
-        try{
+        try {
             Product exist_Product = productJpaRepository.findById(productId).get();
             review.setProduct(exist_Product);
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
         return reviewJpaRepository.save(review);
-        
     }
 
     @Override

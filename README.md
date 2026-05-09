@@ -43,10 +43,14 @@ _Create the SQL files and compose accurate queries to run the application. Inacc
 | :-----------: | :-----------------------------------: |
 |   reviewId    | INTEGER (Primary Key, Auto Increment) |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | reviewId |                 TEXT                  |
 =======
 | reviewContent |                 TEXT                  |
 >>>>>>> commit before final
+=======
+| reviewContent |                 TEXT                  |
+>>>>>>> before final commit 0
 |    rating     |                INTEGER                |
 |   productId   |         INTEGER (Foreign Key)         |
 
