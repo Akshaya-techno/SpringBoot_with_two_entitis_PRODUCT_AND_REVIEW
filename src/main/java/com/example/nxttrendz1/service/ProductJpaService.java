@@ -54,7 +54,7 @@ public class ProductJpaService implements ProductRepository {
 
     @Override
     public Product updateProduct(int productId, Product product) {
-        
+
         try {
             Product oldProduct = productJpaRepository.findById(productId).get();
             if (product.getProductName() != null) {
